@@ -2,7 +2,7 @@ import content from './data.js';
 //fire the script when the doc is finished loading
 $(document).ready(function(){
 //this is the data sector
-var model = {
+var model = {  
     init: function() {
         if (!localStorage.data){
             localStorage.setItem('data', JSON.stringify(content))
@@ -20,7 +20,7 @@ var model = {
     },
 }
 //this is Mr.X ;)
-var x = {
+var x = {   
     init:function(){
         model.init();
         view.init();
@@ -35,7 +35,7 @@ var x = {
     }
 }
 //this is the view sector
-var view = {
+var view = {  
     init:function (){
         $('#currentDay').text(moment().format('dddd[, ]MMMM Do ')) 
         this.container = $('.container');
@@ -45,14 +45,14 @@ var view = {
             this.render(data[id])
             this.addSaveButtonListener(Number(id)+9);
         }  
-
     },
     render:function(data){
-        
-        let currentHour = moment().format('H');
+        let currentHour = moment().format('H') ;
         this.template = $('#hourTemp').text();
-        if (data.h <= 12){
+        if (data.h < 12){
             this.template = this.template.replace('{{timeOfDay}}',data.h+"AM")
+        } else if (data.h == 12){
+            this.template = this.template.replace('{{timeOfDay}}',data.h+"PM")
         } else if (data.h > 12) {
             this.template = this.template.replace('{{timeOfDay}}',data.h-12+"PM")
         }
@@ -76,6 +76,5 @@ var view = {
         x.updateData(timeSlot-9,textContent);
     },
 }
-// Mr.x, command the inits
-x.init()
+x.init()  // Mr.x, command the inits
 })

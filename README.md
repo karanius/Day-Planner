@@ -1,5 +1,7 @@
 # Day Planner!
 
+https://karanius.github.io/Day-Planner/
+
 This is a simple app that lets you keep track of your daily tasks.
 ![](screenShot.png)
 

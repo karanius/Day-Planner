@@ -21,7 +21,7 @@ Enjoy!
 
 # UofT SCS Full-Stack Web Development Boot Camp Project #5: Day Planner
 
-# [Live Lnk](https://karanius.github.io/Day-Planner/) 😊
+# [Live Lnk](https://karanius.github.io/UofT_Day-Planner/) 😊
 
 A simple calendar application that allows the user to save events for each hour of the day.
 
